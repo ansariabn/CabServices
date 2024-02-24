@@ -9,9 +9,9 @@ import AddCab from "./components/cab/AddCab"
 import NavBar from "./components/layout/NavBar"
 import PageNotFound from "./components/layout/PageNotFound"
 import Footer from "./components/layout/Footer"
-import CabListing from "./components/cab/RoomListing"
+
 import Admin from "./components/admin/Admin"
-import Checkout from "./components/booking/AtTravel"
+
 import BookingSuccess from "./components/booking/BookingSuccess"
 import Bookings from "./components/booking/Bookings"
 import FindBooking from "./components/booking/FindBooking"
@@ -22,6 +22,8 @@ import Profile from "./components/auth/Profile"
 import { AuthProvider } from "./components/auth/AuthProvider"
 import RequireAuth from "./components/auth/RequireAuth"
 import SupportTeam from "./components/booking/SupportTeam";
+import AtTravel from "./components/booking/AtTravel";
+import CabListing from "./components/cab/CabListing";
 
 
 function App() {
@@ -40,7 +42,7 @@ function App() {
 							path="/book-cab/:cabId"
 							element={
 								<RequireAuth>
-									<Checkout />
+									<AtTravel />
 								</RequireAuth>
 							}
 						/>
